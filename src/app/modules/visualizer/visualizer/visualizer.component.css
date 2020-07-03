@@ -1,0 +1,14 @@
+mat-card {
+  margin: 20px;
+}
+
+.map-card {
+  flex-shrink: 3;
+  flex-grow: 3;
+  height: 90vh;
+}
+
+.selector-card {
+  min-width: 280px;
+  margin-right: 0;
+}

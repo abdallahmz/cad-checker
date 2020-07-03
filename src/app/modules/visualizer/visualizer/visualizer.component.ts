@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LocationFacadeService } from '../../location/location-facade.service';
+import { LayerOptions } from '../layer-options/layer-options.component';
 
 @Component({
   selector: 'app-visualizer',
@@ -8,13 +9,15 @@ import { LocationFacadeService } from '../../location/location-facade.service';
 })
 export class VisualizerComponent implements OnInit {
 
-  constructor(public readonly locationFacade: LocationFacadeService) { }
+  layerOptions: LayerOptions = {};
+
+  constructor(
+  ) { }
 
   ngOnInit(): void {
-    this.locationFacade.setLocation({
-      commune: '95',
-      departement: '95612'
-    });
   }
 
+  layerOptionsChange($event: LayerOptions): void {
+    this.layerOptions = JSON.parse(JSON.stringify($event));
+  }
 }

@@ -1,0 +1,14 @@
+<p>Couches actives :</p>
+<ng-container *ngFor="let geoJsonType of geoJsonTypes">
+  <div>
+
+      <mat-checkbox
+        [(ngModel)]="layerOptions[geoJsonType]"
+        (ngModelChange)="onChange()"
+      >
+        {{geoJsonType.replace('_', ' ')}}
+      </mat-checkbox>
+
+  </div>
+
+</ng-container>

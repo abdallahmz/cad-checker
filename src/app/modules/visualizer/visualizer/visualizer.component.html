@@ -1,2 +1,9 @@
-<p>Current Location : {{locationFacade.getLocation() | async | json}}</p>
-<app-map-view></app-map-view>
+<div fxLayout="row space-between">
+  <mat-card class="selector-card">
+    <app-location-selector></app-location-selector>
+    <app-layer-options (valueChange)="layerOptionsChange($event)"></app-layer-options>
+  </mat-card>
+  <mat-card class="map-card">
+    <app-map-view [layerOptions]="layerOptions"></app-map-view>
+  </mat-card>
+</div>

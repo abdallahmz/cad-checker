@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+type Point = [number, number];
+
 export enum LoadingStatus {
   LOADING = 'LOADING',
   ERROR = 'ERROR',
@@ -18,8 +20,10 @@ export class LoadingState {
 }
 
 export interface ILocation {
+  name: string;
   departement: string;
   commune: string;
+  bounds: [Point, Point];
 }
 
 @Injectable({

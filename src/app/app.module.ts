@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { VisualizerModule } from './modules/visualizer/visualizer.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
       BrowserModule,
       HttpClientModule,
       VisualizerModule,
+      BrowserAnimationsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,17 @@
 #leafletmap {
-  height: 600px;
+  height: 100%;
+  width: 100%
+}
+
+.toolbar {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 500;
+}
+
+#map-wrapper {
+  position: relative;
+  height: 100%;
   width: 100%
 }
