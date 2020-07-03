@@ -50,8 +50,8 @@ export class MapViewComponent implements OnInit, OnChanges {
       opacity: 0.5
     },
     sections: {
-      color: 'orange',
-      weight: 1,
+      color: 'purple',
+      weight: 2,
       opacity: 0.5
     }
   };
